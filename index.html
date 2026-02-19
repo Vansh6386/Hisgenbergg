@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hisgenberg | Premium Web Agency</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="assets/logo.png" alt="Hisgenberg Logo">
+  </div>
+  <nav>
+    <ul id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#" onclick="openLogin()">Client Login</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h1>Premium Websites for Serious Brands</h1>
+  <p>We design high-converting digital experiences.</p>
+  <button onclick="scrollToSection('pricing')">View Packages</button>
+</section>
+
+<section id="services" class="section">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Business Websites</h3>
+      <p>Professional & conversion focused.</p>
+    </div>
+    <div class="card">
+      <h3>E-commerce</h3>
+      <p>Online stores that sell 24/7.</p>
+    </div>
+    <div class="card">
+      <h3>UI/UX Design</h3>
+      <p>Luxury user interfaces.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="section dark">
+  <h2>Pricing</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Basic</h3>
+      <p>$250</p>
+      <button onclick="selectPlan('Basic')">Choose</button>
+    </div>
+    <div class="card premium">
+      <h3>Premium</h3>
+      <p>$400</p>
+      <button onclick="selectPlan('Premium')">Choose</button>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <p><strong>Phone:</strong> 7895702506</p>
+  <p><strong>Email:</strong> hisgenberg@gmail.com</p>
+
+  <form id="contactForm">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send Inquiry</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Hisgenberg. All Rights Reserved.</p>
+</footer>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeLogin()" class="close">&times;</span>
+    <h2>Client Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+<!-- Client Dashboard -->
+<div id="dashboard" class="dashboard">
+  <h2>Welcome Client 👋</h2>
+  <p>Your Project Status: In Progress</p>
+  <button onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
